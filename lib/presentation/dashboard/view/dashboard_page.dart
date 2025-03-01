@@ -35,6 +35,13 @@ class _DashboardPageState extends State<DashboardPage>
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    _tabController.dispose();
+    _pageController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
